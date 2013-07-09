@@ -3,7 +3,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var textBuffer = new Buffer();
+    var textBuffer = new Buffer(1024);
     
     var byteLength = fs.readSync('index.html', textBuffer);
 
